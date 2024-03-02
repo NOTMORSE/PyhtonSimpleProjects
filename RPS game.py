@@ -75,4 +75,4 @@ def main():
         print("Thank you for playing")
 
 
-start()
+main()
