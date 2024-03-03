@@ -39,23 +39,23 @@ def view():
 
 def completed():
     for i in todo_task:
-         print(f"* {i}".title())
-    print("|1. Mark a task as complete", "\n|2. Return to main menu")
-    choice = int(input("Please enter a number of your choice: "))
-    marked_complete = ""
-    while marked_complete != "n":
-        if choice == 1:
-            marked = input("Please enter the task u completed: ")
-            todo_task.remove(marked)
-            print("Updated list:")
-            for i in todo_task:
-                print(f"* {i}".title())
-                marked_complete = input("Completed another task?(y/n) ").lower()
-                if marked_complete == 'n':
+        print(f"* {i}".title())
+        print("|1. Mark a task as complete", "\n|2. Return to main menu")
+        choice = int(input("Please enter a number of your choice: "))
+        marked_complete = ""
+        while marked_complete != "n":
+            if choice == 1:
+                marked = input("Please enter the task u completed: ")
+                todo_task.remove(marked)
+                print("Updated list:")
+                for i in todo_task:
+                    print(f"* {i}".title())
+                    marked_complete = input("Completed another task?(y/n) ").lower()
+                    if marked_complete == 'n':
+                        todo_list()
+                else:
                     todo_list()
-            else:
-                todo_list()
-                break
+                    break
 
 
 todo_list()
