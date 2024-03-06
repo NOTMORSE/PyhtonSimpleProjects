@@ -29,6 +29,7 @@ def main():
         user_pick = input("Please choose from Rock \U0001F91B, Paper \U0001F91A, or Scissors \U00002702: ").lower()
 
         if user_pick == bot_choice:
+            print(f"You chose {user_pick} \U0001F91B and computer chose {bot_choice} \U0001F91A")
             print("It's a tie")
 
         elif user_pick == "rock" and bot_choice == "paper":
